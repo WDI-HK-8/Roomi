@@ -11,10 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823031242) do
+ActiveRecord::Schema.define(version: 20150823033409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flats", force: :cascade do |t|
+    t.string   "bulding_no"
+    t.string   "building_street_name"
+    t.string   "building_district_name"
+    t.string   "building_type"
+    t.boolean  "building_have_elevator?"
+    t.string   "property_floor"
+    t.integer  "property_no_rooms"
+    t.integer  "property_no_bathrooms"
+    t.boolean  "property_can_smoke?"
+    t.boolean  "property_have_wifi?"
+    t.boolean  "property_allow_pets?"
+    t.integer  "room_rent_amount"
+    t.datetime "room_date_available"
+    t.string   "room_preference"
+    t.integer  "room_no_beds"
+    t.string   "room_type_bed"
+    t.boolean  "room_is_furnished?"
+    t.string   "room_bathroom"
+    t.text     "room_description"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.binary   "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
