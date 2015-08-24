@@ -1,3 +1,31 @@
-app.controller('StaticPagesCtrl', ['$scope', function($scope){
-  $scope.message = "This comes from angular";
+app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
+  $scope.message = "Roomi landing page";
+
+  $scope.loginForm = {};
+
+  $scope.login = function(){
+    $auth.submitLogin($scope.loginForm).
+      then(function(response){
+        //handle success
+        console.log(response);
+        $location.path('/');
+      }).catch(function(response){
+        //handle errors
+        console.log(response);
+      });
+  };
+  
+  $scope.logout = function(){
+    $auth.signOut().
+      then(function(response){
+        //handle success
+        console.log(response);
+        alert("You have signed out");
+      }).
+      catch(function(response){
+        //handle error
+        console.log(response.data.errors);
+      });
+  };
+
 }]);

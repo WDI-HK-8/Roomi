@@ -1,5 +1,31 @@
+
 <div class="container">
   <div class="row">
     <h1> {{ message }} </h1>
+    <a href="/#/signup" class="btn btn-info">Sign up</a>
+    <button ng-click="logout()" class="btn btn-danger">Logout</button>  
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h12>Sign In</h2>
+    <form ng-submit="login()">
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" ng-model="loginForm.email" required="required" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" ng-model="loginForm.password" required="required" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-success">LogIn</button>
+ 
+    </form>
+
+    </form>
   </div>
 </div>
