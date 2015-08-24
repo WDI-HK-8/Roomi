@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150823053022) do
     t.integer  "property_nbr_of_bathrooms"
     t.boolean  "property_can_smoke"
     t.boolean  "property_have_wifi"
-    t.boolean  "property_allow_pets"
+    t.boolean  "are_pets_allowed"
     t.integer  "room_rent_amount"
     t.datetime "room_date_available"
     t.string   "room_preference"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20150823053022) do
   add_index "flats", ["user_id"], name: "index_flats_on_user_id", using: :btree
 
   create_table "photos", force: :cascade do |t|
-    t.binary   "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "flat_id"
@@ -71,11 +70,10 @@ ActiveRecord::Schema.define(version: 20150823053022) do
     t.integer  "age"
     t.string   "occupation"
     t.string   "gender"
-    t.boolean  "is_smoker?"
-    t.boolean  "have_kids?"
-    t.boolean  "have_pet?"
+    t.boolean  "is_smoker"
+    t.boolean  "have_kids"
+    t.boolean  "have_pet"
     t.text     "decription"
-    t.binary   "profile_picture"
     t.json     "tokens"
     t.datetime "created_at"
     t.datetime "updated_at"

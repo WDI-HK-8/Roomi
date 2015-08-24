@@ -41,11 +41,10 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
       t.integer :age
       t.string  :occupation
       t.string  :gender
-      t.boolean :is_smoker?
-      t.boolean :have_kids?
-      t.boolean :have_pet?
+      t.boolean :is_smoker
+      t.boolean :have_kids
+      t.boolean :have_pet
       t.text    :decription
-      t.binary  :profile_picture
       
 
       ## Tokens

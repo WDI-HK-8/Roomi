@@ -11,7 +11,7 @@ class CreateFlats < ActiveRecord::Migration
       t.integer  :property_nbr_of_bathrooms
       t.boolean  :property_can_smoke
       t.boolean  :property_have_wifi
-      t.boolean  :property_allow_pets
+      t.boolean  :are_pets_allowed
       t.integer  :room_rent_amount
       t.datetime :room_date_available
       t.string   :room_preference
