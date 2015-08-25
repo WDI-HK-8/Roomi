@@ -17,8 +17,8 @@
           </div>
 
           <div class="form-group">
-            <lable>First name</lable>
-            <input type="text" name="first_name" ng-model="registrationForm.first_name" required="required" class="form-control">
+            <lable>Last name</lable>
+            <input type="text" name="last_name" ng-model="registrationForm.last_name" required="required" class="form-control">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
 
           <div class="form-group">
             <label>Phone number</label>
-            <input type="text" name="phone" ng-model="registrationForm.phone" class="form-control">
+            <input type="tel" name="phone" ng-model="registrationForm.phone" class="form-control">
           </div>
 
           <div class="form-group">
@@ -43,27 +43,33 @@
 
           <div class="form-group">
             <label>Occupation</label>
-            <input type="text" name="occupation" ng-model="registrationForm.occupation" required="required" class="form-control">
+            <select ng-model="registrationForm.occupation" ng-options="occupation.Name as occupation.Name for occupation in Occupations track by occupation.Id"
+            ng-change="GetOccupation()">
+            </select>
           </div>
 
           <div class="form-group">
             <label>Gender</label>
-            <input type="text" name="gender" ng-model="registrationForm.gender" required="required" class="form-control">
+            <input type="radio" ng-model="registrationForm.gender" value="male" />male
+            <input type="radio" ng-model="registrationForm.gender" value="female" />female<br />
           </div>
 
           <div class="form-group">
             <label>Are you a smoker ?</label>
-            <input type="text" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" class="form-control">
+            <input type="radio" ng-model="registrationForm.is_smoker" value="true" />Yes
+            <input type="radio" ng-model="registrationForm.is_smoker" value="false" />Nope<br />
           </div>
 
           <div class="form-group">
             <label>Do you have any kids ?</label>
-            <input type="password" name="have_kids" ng-model="registrationForm.have_kids" required="required" class="form-control">
+            <input type="radio" ng-model="registrationForm.have_kids" value="true" />Yes
+            <input type="radio" ng-model="registrationForm.have_kids" value="false" />Nope<br />
           </div>
 
           <div class="form-group">
             <label>Any pets ?</label>
-            <input type="text" name="have_pet" ng-model="registrationForm.have_pet" required="required" class="form-control">
+            <input type="radio" ng-model="registrationForm.have_pet" value="true" />Yes
+            <input type="radio" ng-model="registrationForm.have_pet" value="false" />Nope<br />
           </div>
 
           <div class="form-group">
