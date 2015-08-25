@@ -25,13 +25,7 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
       then(function(response){
         //handle success
         console.log(response);
-        $location.path('/')
         $scope.loggedIn = true;
-
-      }).catch(function(response){
-        //handle errors
-        console.log(response);
-      });
   };
   
   // Logout
