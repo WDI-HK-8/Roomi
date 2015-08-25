@@ -15,17 +15,6 @@ app.controller('SignUpCtrl', ['$scope', '$http', '$auth', '$location','$window',
                 Name: 'Retired'
             }];
 
-            
-  $scope.GetOccupation = function (occupation) {
-      // var occupationId = $scope.ddlOccupations;
-      // var occupationName = $.grep($scope.Occupations, function (occupation) {
-      //     return occupation.Id == occupationId;
-      // })[0];
-      // console.log("Selected Value: " + occupationId + "\nSelected Text: " + occupationName);
-
-    console.log($scope.registrationForm);
-  }
-
   $scope.registrationForm = {};
 
   $scope.signup = function(){
