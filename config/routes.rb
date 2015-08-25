@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   resources :users
   
-  get '/users/me' => 'users#me' 
+  get '/me' => 'users#me' 
 end

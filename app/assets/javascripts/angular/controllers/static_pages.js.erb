@@ -18,7 +18,7 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
     console.log($scope.loggedIn);
     console.log($scope.authStatus)
   }
-
+  
   // Login
   $scope.login = function(){
     $auth.submitLogin($scope.loginForm).
@@ -26,6 +26,10 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
         //handle success
         console.log(response);
         $scope.loggedIn = true;
+      }).catch(function(response){
+        //handle errors
+        console.log(response);
+      });
   };
   
   // Logout
@@ -36,6 +40,7 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
         console.log(response);
         alert("You have signed out");
         $scope.loggedIn = false;
+        UserServices.user = null
       }).
       catch(function(response){
         //handle error

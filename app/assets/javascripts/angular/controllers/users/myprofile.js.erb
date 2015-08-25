@@ -1,0 +1,19 @@
+app.controller('MyProfileCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
+
+$http.get('/me').
+    then(function(response){
+    console.log(response)
+    $scope.message = response.data.first_name;
+  }).catch(function(response){
+    console.log(response)
+  });
+
+
+}]);
+
+
+
+
+
+
+
