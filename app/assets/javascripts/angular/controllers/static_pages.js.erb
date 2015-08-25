@@ -3,29 +3,47 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
 
   $scope.loginForm = {};
 
+  // check if user is logged in
+  $scope.authResponse = []
+  $scope.authResponse.push($auth.validateUser())
+  $scope.authStatus = $scope.authResponse[0].$$state.status
+  
+  if ($scope.authStatus == 2) {
+    $scope.loggedIn = false;  
+    console.log($scope.loggedIn);
+    console.log($scope.authStatus)
+  } else {
+    $scope.loggedIn = true;
+    console.log($scope.loggedIn);
+    console.log($scope.authStatus)
+  }
+
+  // Login
   $scope.login = function(){
     $auth.submitLogin($scope.loginForm).
       then(function(response){
         //handle success
         console.log(response);
-        $location.path('/');
+        $location.path('/')
+        $scope.loggedIn = true;
       }).catch(function(response){
         //handle errors
         console.log(response);
       });
   };
   
+  // Logout
   $scope.logout = function(){
     $auth.signOut().
       then(function(response){
         //handle success
         console.log(response);
         alert("You have signed out");
+        $scope.loggedIn = false;
       }).
       catch(function(response){
         //handle error
         console.log(response.data.errors);
       });
   };
-
 }]);
