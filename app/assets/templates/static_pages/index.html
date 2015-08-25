@@ -1,31 +1,134 @@
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <h1> {{ message }} </h1>
     <a href="/#/signup" class="btn btn-info">Sign up</a>
     <button ng-click="logout()" class="btn btn-danger">Logout</button>  
   </div>
-</div>
+</div> -->
 
-<div class="container">
-  <div class="row">
-    <h12>Sign In</h2>
-    <form ng-submit="login()">
-
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" ng-model="loginForm.email" required="required" class="form-control">
-      </div>
-
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" name="password" ng-model="loginForm.password" required="required" class="form-control">
-      </div>
-
-      <button type="submit" class="btn btn-success">LogIn</button>
- 
-    </form>
-
-    </form>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <a href="/#/">
+      <img class="navbar-brand">
+    </a>
   </div>
-</div>
+
+  <!-- Top Menu Items -->
+  <ul class="nav top-nav">
+
+    <!-- search bar -->
+    <li class="" id="searchbar">
+      <form class="navbar-form form-inline global-search" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="">Enter search terms</label>
+          <input type="search" class="form-control" id="front-search" placeholder="Find a room">
+          </input>
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+      </form>
+    </li>        
+
+    <!-- list room -->
+    <li class="pull-right">
+      <a href="" id="listmyroom">LIST MY ROOM</a>
+    </li>
+
+
+    <!-- login -->
+    <li class="pull-right dropdown">
+      <a href="#/" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Login <b class=" glyphicon glyphicon-user"></b></a>
+      <ul class="dropdown-menu col-lg-9" aria-labelledby="dropdownMenu1">
+        <div class="dropdown-wrapper"> 
+          <form ng-submit="login()">
+            <div class="textbox">
+              <label class="email"><span>Email</span>
+                <input class="js-email-field" id="si_email" type="email" name="email" ng-model="loginForm.email" required="required">
+              </label>
+              <label class="password"><span>Password</span>
+                <input class="js-password-field" id="si_password" type="password" name="password" ng-model="loginForm.password" required="required" class="form-control">
+            </div>
+            <div class="subchck">
+              <button type="submit" class="btn submit down-button" id="log-in" ><b>Log in</b></button>
+            </div>
+          </form>
+          <div class="footer">
+             <a class="footer-links" href="/#/signup">Don't have an account? Register now! </a>
+          </div>
+        </div>     
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- header -->
+<header id="top" class="header lg-col-12 wrapper">
+  <div class="text-vertical-center wrapper">
+    <div class="title-txt">
+      <h1>Your next roommate is just a click away.</h1>
+    </div>
+  </div>
+              
+  <!-- left box -->
+  <div class="text-vertical-center wrapper col-lg-5 left-col">
+    <div class="front-left">
+      <form>
+        <table>
+          <tbody>
+            <tr>
+              <div class="front-left-txt">
+                <p>Looking for the perfect room? Start searching now!</p>
+              </div>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <input type="text" id="front-search" class="text-input" placeholder="Search by district e.g. Wan Chai">
+                </div>
+              </td>
+              <td class="">
+                <button type="submit" id="front-search-btn" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <!-- center spacing -->
+  <div class="text-vertical-center wrapper col-lg-2 col-lg-offset-5 left-col">
+  </div>
+  
+
+  <!-- Right box -->
+  <div class="text-vertical-center wrapper col-lg-offset-7 col-lg-5 right-col">
+    <div class="text-vertical-center wrapper col-lg-5 left-col">
+      <div class="front-right">
+        <form>
+          <table>
+            <tbody>
+              <tr>
+                <div class="front-right-txt">
+                  <p>Looking for your next roommate?</p>
+                </div>
+              </tr>
+              <tr>
+                <button type="submit" id="front-mates-btn" class="btn btn-default">List your room and find your next roommate!</button>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- recently added -->
+<section class="">
+  <div id="recently-added">
+    <h1> Recently added rooms </h1>
+    
+  </div>
+</section>
