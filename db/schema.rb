@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150823053022) do
   enable_extension "plpgsql"
 
   create_table "flats", force: :cascade do |t|
-    t.string   "bulding_number"
+    t.string   "building_number"
     t.string   "building_street_name"
     t.string   "building_district_name"
     t.string   "building_type"
@@ -66,14 +66,14 @@ ActiveRecord::Schema.define(version: 20150823053022) do
     t.string   "email"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "phone"         #not required
+    t.string   "phone"
     t.integer  "age"
     t.string   "occupation"
     t.string   "gender"
-    t.boolean  "is_smoker" 
+    t.boolean  "is_smoker"
     t.boolean  "have_kids"
     t.boolean  "have_pet"
-    t.text     "decription"
+    t.text     "description"
     t.json     "tokens"
     t.datetime "created_at"
     t.datetime "updated_at"
