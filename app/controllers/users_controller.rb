@@ -13,6 +13,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find_by_id(params[:id])
+
+    if @user.nil?
+      render json: { message: "Cannot find user" }, status: :not_found
+    end
+  end
+
   def destroy
     @user = User.find_by_id(params[:id])
 
