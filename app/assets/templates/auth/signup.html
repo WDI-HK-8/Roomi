@@ -43,8 +43,7 @@
 
           <div class="form-group">
             <label>Occupation</label>
-            <select ng-model="registrationForm.occupation" ng-options="occupation.Name as occupation.Name for occupation in Occupations track by occupation.Id"
-            ng-change="GetOccupation()">
+            <select ng-model="registrationForm.occupation" ng-options="occupation.Name as occupation.Name for occupation in Occupations track by occupation.Id">
             </select>
           </div>
 
