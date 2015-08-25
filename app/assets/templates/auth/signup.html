@@ -1,30 +1,87 @@
 <div class="container">
   <div class="row">
-    <h1> {{ message }} </h1>
-    <form ng-submit="signup()">
+    
+    <div class="container col-lg-6 col-lg-offset-3">
+      <div class="row">
+        <h1> {{ message }} </h1>
+        <form ng-submit="signup()">
 
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <lable>First name</lable>
+            <input type="text" name="first_name" ng-model="registrationForm.first_name" required="required" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <lable>Last name</lable>
+            <input type="text" name="last_name" ng-model="registrationForm.last_name" required="required" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" ng-model="registrationForm.password" required="required" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Password Confirmation</label>
+            <input type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Phone number</label>
+            <input type="tel" name="phone" ng-model="registrationForm.phone" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Age</label>
+            <input type="integer" name="age" ng-model="registrationForm.age" required="required" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Occupation</label>
+            <select ng-model="registrationForm.occupation" ng-options="occupation.Name as occupation.Name for occupation in Occupations track by occupation.Id"
+            ng-change="GetOccupation()">
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <input type="radio" ng-model="registrationForm.gender" value="male" />male
+            <input type="radio" ng-model="registrationForm.gender" value="female" />female<br />
+          </div>
+
+          <div class="form-group">
+            <label>Are you a smoker ?</label>
+            <input type="radio" ng-model="registrationForm.is_smoker" value="true" />Yes
+            <input type="radio" ng-model="registrationForm.is_smoker" value="false" />Nope<br />
+          </div>
+
+          <div class="form-group">
+            <label>Do you have any kids ?</label>
+            <input type="radio" ng-model="registrationForm.have_kids" value="true" />Yes
+            <input type="radio" ng-model="registrationForm.have_kids" value="false" />Nope<br />
+          </div>
+
+          <div class="form-group">
+            <label>Any pets ?</label>
+            <input type="radio" ng-model="registrationForm.have_pet" value="true" />Yes
+            <input type="radio" ng-model="registrationForm.have_pet" value="false" />Nope<br />
+          </div>
+
+          <div class="form-group">
+            <label>Tell about yourself</label>
+            <input type="text" name="description" ng-model="registrationForm.description" required="required" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-success">Submit</button>
+          <a href="/#/" class="btn btn-danger">Back</a>
+        </form>
       </div>
-
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" name="password" ng-model="registrationForm.password" required="required" class="form-control">
-      </div>
-
-      <div class="form-group">
-        <label>Password Confirmation</label>
-        <input type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" class="form-control">
-      </div>
-
-      <div class="form-group">
-        <lable>First name</lable>
-        <input type="text" name="first_name" ng-model="registrationForm.first_name" required="required" class="form-control">
-      </div>
-
-      <button type="submit" class="btn btn-success">Submit</button>
-      <a href="/#/" class="btn btn-danger">Back</a>
-    </form>
+    </div>
+  
   </div>
 </div>

@@ -1,9 +1,36 @@
-app.controller('SignUpCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
+app.controller('SignUpCtrl', ['$scope', '$http', '$auth', '$location','$window', function($scope, $http, $auth, $location, $window){
   $scope.message = "SignUp"
+
+  $scope.Occupations = [{
+                Id: 1,
+                Name: 'Student'
+            }, {
+                Id: 2,
+                Name: 'Employed'
+            }, {
+                Id: 3,
+                Name: 'Unemployed'
+            }, {
+                Id: 4,
+                Name: 'Retired'
+            }];
+
+            
+  $scope.GetOccupation = function (occupation) {
+      // var occupationId = $scope.ddlOccupations;
+      // var occupationName = $.grep($scope.Occupations, function (occupation) {
+      //     return occupation.Id == occupationId;
+      // })[0];
+      // console.log("Selected Value: " + occupationId + "\nSelected Text: " + occupationName);
+
+    console.log($scope.registrationForm);
+  }
 
   $scope.registrationForm = {};
 
   $scope.signup = function(){
+    console.log($scope.registrationForm);
+
     $auth.submitRegistration($scope.registrationForm).
       then(function(response){
         //handle success

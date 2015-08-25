@@ -66,11 +66,11 @@ ActiveRecord::Schema.define(version: 20150823053022) do
     t.string   "email"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "phone"
+    t.string   "phone"         #not required
     t.integer  "age"
     t.string   "occupation"
     t.string   "gender"
-    t.boolean  "is_smoker"
+    t.boolean  "is_smoker" 
     t.boolean  "have_kids"
     t.boolean  "have_pet"
     t.text     "decription"
