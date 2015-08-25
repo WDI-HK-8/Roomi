@@ -6,15 +6,14 @@ src: url('fonts/Lato-Light.ttf')  format('truetype');
 font-weight: bold;
 }
 
-
 /*navbar*/
 #top {
-    margin-top: 65px;
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background: url(./bg2.png) no-repeat center;
-    background-size: cover;
+  margin-top: 65px;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url(./bg2.png) no-repeat center;
+  background-size: cover;
 }
 
 .navbar-inverse {
@@ -22,22 +21,21 @@ font-weight: bold;
 }
 
 .navbar-brand {
-    margin: 20px 0px 0px 20px;
-    width: 220%;
-    height: 100%;
-    background: url(./roomi.png) no-repeat center;
+  margin: 20px 0px 0px 20px;
+  width: 220%;
+  height: 100%;
+  background: url(./roomi.png) no-repeat center;
 }
-
 
 /* Top Navigation */
 .top-nav>li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .top-nav>li>a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    line-height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
 }
 
 .top-nav>li>a:hover,
@@ -45,12 +43,36 @@ font-weight: bold;
 .top-nav>.open>a,
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
-    border-radius: 40px;
+  border-radius: 40px;
 }
 
+#listmyroom {
+  margin-top: 15px;
+  margin-right: 20px;
+  height: 36px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: orange;
+  font-weight: bold; 
+  border: 2px solid #fff;
+  font-family: Lato;
+}
+
+#searchbar{
+  margin-top: 10px;
+  margin-left: 35%;
+  width: 400px
+}
+
+#searchbar input{
+  width: 300px
+}
 
 /*dropdown menu*/
-
 .email, .password {
   font-size: 16px;
   font-family: Lato;
@@ -82,8 +104,6 @@ font-weight: bold;
   margin-left: 12px;
 }
 
-
-
 .dropdown-toggle {
   margin-right: 10px;
   font-size: 15px;
@@ -91,8 +111,8 @@ font-weight: bold;
   margin-top: 8px;
   color: white;
   font-family: Lato;
-
 }
+
 .dropdown-menu {
   width: 320px;
 }
@@ -109,41 +129,8 @@ font-weight: bold;
   margin-right: 30px;
   margin-bottom: 10px;
 }
- 
-.remember {
-  font-size: 10px;
-}
-
-
-#listmyroom {
-    margin-top: 15px;
-    margin-right: 20px;
-    height: 36px;
-    padding-top: 6px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 3px;
-    color: #fff;
-    background-color: orange;
-    font-weight: bold; 
-    border: 2px solid #fff;
-    font-family: Lato;
-}
-
-#searchbar{
-    margin-top: 10px;
-    margin-left: 35%;
-    width: 400px
-}
-
-#searchbar input{
-    width: 300px
-}
-
 
 /*header*/
-
 .title-txt {
   padding-top: 10%;
   padding-left: 25%;
@@ -230,7 +217,6 @@ font-weight: bold;
 #front-mates-btn:hover {
   background-color: #5cd2f9;
 }
-
 
 /*recently added*/
 #recently-added {
