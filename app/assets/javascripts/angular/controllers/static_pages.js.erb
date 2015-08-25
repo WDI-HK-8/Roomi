@@ -7,6 +7,7 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
   $scope.authResponse = []
   $scope.authResponse.push($auth.validateUser())
   $scope.authStatus = $scope.authResponse[0].$$state.status
+  $scope.loginName = $scope.authResponse[0].$$state.value.first_name
   
   if ($scope.authStatus == 2) {
     $scope.loggedIn = false;  
@@ -26,6 +27,7 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
         console.log(response);
         $location.path('/')
         $scope.loggedIn = true;
+
       }).catch(function(response){
         //handle errors
         console.log(response);
