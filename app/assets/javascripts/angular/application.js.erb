@@ -10,9 +10,9 @@ app.config(['$routeProvider','$locationProvider','$authProvider', function($rout
     when('/signup', {
       templateUrl: "<%= asset_path('auth/signup.html') %>",
       controller: 'SignUpCtrl'
-    })
+    });
 
   $authProvider.configure({
-  apiUrl: <%= ENV['URL'] || 'http://localhost:3000' %>
+    apiUrl: "<%= ENV['URL'] || 'http://localhost:3000' %>"
   })
 }]);

@@ -1,7 +1,7 @@
 class CreateFlats < ActiveRecord::Migration
   def change
     create_table :flats do |t|
-      t.string   :bulding_number
+      t.string   :building_number
       t.string   :building_street_name
       t.string   :building_district_name
       t.string   :building_type

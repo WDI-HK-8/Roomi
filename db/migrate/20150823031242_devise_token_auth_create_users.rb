@@ -44,7 +44,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
       t.boolean :is_smoker
       t.boolean :have_kids
       t.boolean :have_pet
-      t.text    :decription
+      t.text    :description
       
 
       ## Tokens

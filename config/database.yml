@@ -17,5 +17,5 @@ test:
   database: roomi_test
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  # <<: *default
+  # database: db/production.sqlite3
