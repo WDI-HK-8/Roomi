@@ -20,4 +20,5 @@ json.array! @flats do |flat|
   json.room_description flat.room_description
   json.user_id flat.user_id
   json.user flat.user
+  json.image flat.image
 end

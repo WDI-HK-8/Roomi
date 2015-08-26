@@ -50,7 +50,7 @@ class FlatsController < ApplicationController
   private
 
   def flat_params
-    params.require(:flat).permit(:building_number, :building_street_name, :building_district_name, :building_type, :buiding_have_elevator, :property_floor, :property_nbr_of_rooms, :property_nbr_of_bathrooms, :property_can_smoke, :property_have_wifi, :are_pets_allowed, :room_rent_amount, :room_date_available, :room_preference, :room_no_beds, :room_type_bed, :is_room_furnished, :room_bathroom, :room_description)
+    params.require(:flat).permit(:building_number, :building_street_name, :building_district_name, :building_type, :buiding_have_elevator, :property_floor, :property_nbr_of_rooms, :property_nbr_of_bathrooms, :property_can_smoke, :property_have_wifi, :are_pets_allowed, :room_rent_amount, :room_date_available, :room_preference, :room_no_beds, :room_type_bed, :is_room_furnished, :room_bathroom, :room_description, :image)
   end
 
 end
