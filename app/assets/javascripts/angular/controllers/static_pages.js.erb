@@ -10,4 +10,8 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', '$wi
       $location.path('/myprofile/newflat');
     }
   }
+  $scope.search_page = function(){
+    $location.path('/search')
+  }
+
 }]);
