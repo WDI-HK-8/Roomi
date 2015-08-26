@@ -20,7 +20,12 @@ app.config(['$routeProvider','$locationProvider','$authProvider', function($rout
     when('/myprofile/newflat', {
       templateUrl: "<%= asset_path('flats/flats.html') %>",
       controller: 'ListRoomCtrl'
-    });
+    }).
+
+    when('/room/:id',{
+      templateUrl: "<%= asset_path('flats/singleflat.html') %>",
+      controller: 'SingleFlatCtrl'
+    })
 
   $authProvider.configure({
     apiUrl: "<%= ENV['URL'] || 'http://localhost:3000' %>"
