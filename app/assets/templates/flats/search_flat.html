@@ -1,17 +1,22 @@
-<div class="container">
+<navbar></navbar>
+<div class="container list_of_flats">
   <div class="row">
 
     <div class="container flat-item" ng-repeat="flat in flats">
-      <a href="">
-        <div class="container col-xs-8 col-xs-offset-2">
+      <a href="#/room/{{ flat.id }}">
+        <div class="container col-xs-8">
           <div class="row">
             <div class="container col-xs-4">
               <img src="http://media-cdn.tripadvisor.com/media/photo-o/02/35/07/69/appart-city-chalon-sur.jpg">
             </div>
-            <div class="container col-xs-8">
+            <div class="container col-xs-4">
               <h2>{{ flat.building_district_name }}</h2>
-              <h3>{{ flat.rent }}</h3>
-              <h4>{{ flat.date_available }}</h4>
+              <h4>{{ flat.room_rent_amount }} HKD per month</h4>
+              <h4>availble from {{ flat.room_date_available | date:'longDate'}}</h4>
+            </div>
+            <div class="container col-xs-4">
+              <p>Posted by {{ flat.user.first_name }}</p>
+              <p>{{ flat.room_description }}</p>
             </div>
           </div>
         </div>
