@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
           <label>Building type</label>
-          <select ng-model="flat.buildingType" ng-options="buildingType.Name as buildingType.Name for buildingType in BuildingType track by buildingType.Id">
+          <select ng-model="flat.building_type" ng-options="buildingType.Name as buildingType.Name for buildingType in BuildingType track by buildingType.Id">
            </select>
         </div>
         <div class="form-group">
@@ -46,7 +46,7 @@
           <input type="radio" ng-model="flat.property_can_smoke" value="false">No</input>
         </div>
         <div class="form-group">
-          <label>Is wifi provided?</label>
+          <label>Is WIFI available?</label>
           <input type="radio" ng-model="flat.property_have_wifi" value="true">Yes</input>
           <input type="radio" ng-model="flat.property_have_wifi" value="false">No</input>
         </div>
@@ -60,7 +60,7 @@
 <!-- room  -->
       <div class="col-lg-offset-6 col-lg-6">
         <div class="form-group">
-          <label>Rent amount per week</label>
+          <label>Rent amount per month</label>
           <input type="text" class="form-control" placeholder="Enter title" ng-model="flat.room_rent_amount">
         </div>
         <div class="form-group">
@@ -91,7 +91,7 @@
         </div>
         <div class="form-group">
           <label>What type of bathroom is provided?</label>
-          <select ng-model="flat.roomBathroom" ng-options="roomBathroom.Name as roomBathroom.Name for roomBathroom in RoomBathroom track by roomBathroom.Id">
+          <select ng-model="flat.room_bathroom" ng-options="roomBathroom.Name as roomBathroom.Name for roomBathroom in RoomBathroom track by roomBathroom.Id">
            </select>
         </div>
         <div class="form-group">
