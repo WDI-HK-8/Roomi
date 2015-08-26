@@ -48,5 +48,13 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
       });
   };
 
-
+   //redirect to list room
+  $scope.list_room = function(){ 
+    if ($scope.loggedIn == false) {
+      console.log("asd");
+      $location.path('/signup');
+    } else {
+      $location.path('/myprofile/newflat');
+    }
+  }
 }]);

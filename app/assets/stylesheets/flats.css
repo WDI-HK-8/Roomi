@@ -1,4 +1,13 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+#flat-form {
+  margin-top: 100px;
+  position: relative;
+}
+
+.room-panel {
+  margin-top: -577px;
+}
+
+#submit-btn {
+  margin-top: 450px;
+  margin-left: 15px;
+}
