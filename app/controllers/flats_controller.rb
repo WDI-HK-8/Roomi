@@ -6,7 +6,7 @@ class FlatsController < ApplicationController
 
 
   def create
-    @flat = Flat.new(flat_params)
+    @flat = Flat.new(flat_params.merge(user: current_user))
 
     if @flat.save
       # render success in Jbuilder
