@@ -1,0 +1,9 @@
+.flat-item {
+  border: 1px solid black;
+  display: inline-block;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}

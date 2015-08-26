@@ -11,20 +11,21 @@ app.config(['$routeProvider','$locationProvider','$authProvider', function($rout
       templateUrl: "<%= asset_path('auth/signup.html') %>",
       controller: 'SignUpCtrl'
     }).
-
     when('/myprofile',{
       templateUrl: "<%= asset_path('users/myprofile.html') %>",
       controller: 'MyProfileCtrl'
     }).
-
     when('/myprofile/newflat', {
       templateUrl: "<%= asset_path('flats/flats.html') %>",
       controller: 'ListRoomCtrl'
     }).
-
     when('/room/:id',{
       templateUrl: "<%= asset_path('flats/singleflat.html') %>",
       controller: 'SingleFlatCtrl'
+    }).
+    when('/search', {
+      templateUrl: "<%= asset_path('flats/search_flat.html') %>",
+      controller: 'SearchCtrl'
     })
 
   $authProvider.configure({
