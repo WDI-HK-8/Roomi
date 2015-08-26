@@ -17,7 +17,7 @@ app.config(['$routeProvider','$locationProvider','$authProvider', function($rout
       controller: 'MyProfileCtrl'
     }).
 
-    when('/flats', {
+    when('/myprofile/newflat', {
       templateUrl: "<%= asset_path('flats/flats.html') %>",
       controller: 'ListRoomCtrl'
     });

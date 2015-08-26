@@ -1,4 +1,13 @@
-app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
+app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', '$window', function($scope, $http, $auth, $location, $window){
   $scope.message = "Roomi landing page";
-  
+
+  //redirect to list room
+  $scope.list_room = function(){ 
+    if ($scope.loggedIn == false) {
+      console.log("asd");
+      $location.path('/signup');
+    } else {
+      $location.path('/myprofile/newflat');
+    }
+  }
 }]);
