@@ -11,24 +11,10 @@ app.controller('MyProfileCtrl', ['$scope', '$http', '$auth', '$location', functi
   $scope.occupation = user_loggedin.occupation;
   $scope.gender = user_loggedin.gender;
   
-  if(user_loggedin.is_smoker){
-    $scope.is_smoker = "Yes";
-  }else{
-    $scope.is_smoker = "No";
-  }
-
-  if(user_loggedin.have_kids){
-    $scope.have_kids = "Yes";
-  }else{
-    $scope.have_kids = "No";
-  }
-
-  if(user_loggedin.have_pet){
-    $scope.have_pet = "Yes";
-  }else{
-    $scope.have_pet = "No";
-  }
-
+  $scope.is_smoker = user_loggedin.is_smoker ? "Yes" : "No";
+  $scope.have_kids = user_loggedin.have_kids ? "Yes" : "No";
+  $scope.have_pet = user_loggedin.have_pet ? "Yes" : "No";
+  
   $scope.description = user_loggedin.description;
 
 }]);
