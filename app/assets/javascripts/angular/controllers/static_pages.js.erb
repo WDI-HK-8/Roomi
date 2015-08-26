@@ -40,7 +40,6 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
         console.log(response);
         alert("You have signed out");
         $scope.loggedIn = false;
-        UserServices.user = null
       }).
       catch(function(response){
         //handle error

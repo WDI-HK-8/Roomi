@@ -17,6 +17,7 @@ gem 'rails_12factor', group: :production
 
 gem 'devise_token_auth'
 gem 'omniauth'
+gem 'sass-rails'
 
 group :development do
   gem "web-console"
