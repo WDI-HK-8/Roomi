@@ -1,38 +1,35 @@
 app.controller('MyProfileCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
     
-    $scope.authResponse = []
-    $scope.authResponse.push($auth.validateUser())
-    $scope.authStatus = $scope.authResponse[0].$$state.status
+  $scope.authResponse = $auth.validateUser()
+  var user_loggedin = $scope.authResponse.$$state.value
+  
+  $scope.first_name = user_loggedin.first_name;
+  $scope.last_name = user_loggedin.last_name;
+  $scope.email = user_loggedin.email;
+  $scope.phone = user_loggedin.phone;
+  $scope.age = user_loggedin.age;
+  $scope.occupation = user_loggedin.occupation;
+  $scope.gender = user_loggedin.gender;
+  
+  if(user_loggedin.is_smoker){
+    $scope.is_smoker = "Yes";
+  }else{
+    $scope.is_smoker = "No";
+  }
 
-    var user_loggedin = $scope.authResponse[0].$$state.value
-    
-    $scope.first_name = user_loggedin.first_name;
-    $scope.last_name = user_loggedin.last_name;
-    $scope.email = user_loggedin.email;
-    $scope.phone = user_loggedin.phone;
-    $scope.age = user_loggedin.age;
-    $scope.occupation = user_loggedin.occupation;
-    $scope.gender = user_loggedin.gender;
-    
-    if(user_loggedin.is_smoker){
-      $scope.is_smoker = "Yes";
-    }else{
-      $scope.is_smoker = "No";
-    }
+  if(user_loggedin.have_kids){
+    $scope.have_kids = "Yes";
+  }else{
+    $scope.have_kids = "No";
+  }
 
-    if(user_loggedin.have_kids){
-      $scope.have_kids = "Yes";
-    }else{
-      $scope.have_kids = "No";
-    }
+  if(user_loggedin.have_pet){
+    $scope.have_pet = "Yes";
+  }else{
+    $scope.have_pet = "No";
+  }
 
-    if(user_loggedin.have_pet){
-      $scope.have_pet = "Yes";
-    }else{
-      $scope.have_pet = "No";
-    }
-
-    $scope.description = user_loggedin.description;
+  $scope.description = user_loggedin.description;
 
 }]);
 

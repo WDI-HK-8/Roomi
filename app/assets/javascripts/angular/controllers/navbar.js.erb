@@ -2,9 +2,10 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
   $scope.loginForm = {};
 
   // check if user is logged in
-  $scope.authResponse = []
-  $scope.authResponse.push($auth.validateUser())
-  $scope.authStatus = $scope.authResponse[0].$$state.status
+  $scope.authResponse = $auth.validateUser()
+  $scope.authStatus = $scope.authResponse.$$state.status
+  $scope.loginName = $scope.authResponse.$$state.value.first_name
+  console.log($scope.loginName)
   
   if ($scope.authStatus == 2) {
     $scope.loggedIn = false;  
@@ -23,6 +24,8 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
         //handle success
         console.log(response);
         $scope.loggedIn = true;
+        $scope.authResponse = $auth.validateUser()
+        $scope.loginName = $scope.authResponse.$$state.value.first_name
       }).catch(function(response){
         //handle errors
         console.log(response);
@@ -44,5 +47,6 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
         console.log(response.data.errors);
       });
   };
+
 
 }]);

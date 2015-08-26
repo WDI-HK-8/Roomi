@@ -32,7 +32,6 @@ app.controller('SignUpCtrl', ['$scope', '$http', '$auth', '$location','$window',
   }
   $scope.authResponse = $auth.validateUser()
   $scope.authStatus = $scope.authResponse.$$state.status
-  $scope.loginName = $scope.authResponse.$$state.value.first_name
   console.log($scope.authResponse)
   console.log($scope.authResponse.$$state.value)
   
