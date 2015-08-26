@@ -38,7 +38,6 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
       then(function(response){
         //handle success
         console.log(response);
-        alert("You have signed out");
         $scope.loggedIn = false;
         $location.path('/')
       }).

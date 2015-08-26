@@ -4,7 +4,7 @@
     <div class="form-group">
       <label>Select a district</label>
       <select ng-model="district_name" ng-options="district.Name as district.Name for district in Districts track by district.Id">
-       </select>
+      </select>
     </div>
 
     <div class="container flat-item" ng-repeat="flat in flats | filter: filterFlats">
