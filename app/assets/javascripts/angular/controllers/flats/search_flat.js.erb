@@ -4,6 +4,7 @@ app.controller('SearchCtrl', ['$scope', '$http', '$auth', '$location', function(
   $http.get('/flats').success(function(response){
     $scope.flats = response
     console.log($scope.flats)
+
   })
 
   
