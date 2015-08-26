@@ -78,39 +78,7 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', functio
   $scope.form.create = function(){
     var data = {
       flat: $scope.flat
-      // 'flat[building_number]': $scope.flat.building_number,
-      // 'flat[buliding_street_name]': $scope.flat.building_street_name,
-      // 'flat[building_district_name]': $scope.flat.building_district_name,
-      // 'flat[building_type]': $scope.flat.building_type,
-      // 'flat[building_have_elevator]': $scope.flat.building_have_elevator,
-      // 'flat[property_floor]': $scope.flat.property_floor,
-      // 'flat[property_nbr_of_rooms]': $scope.flat.property_nbr_of_rooms,
-      // 'flat[property_nbr_of_bathrooms]': $scope.flat.property_nbr_of_bathrooms,
-      // 'flat[property_can_smoke]': $scope.flat.property_can_smoke,
-      // 'flat[property_have_wifi]': $scope.flat.property_have_wifi,
-      // 'flat[are_pets_allowed]': $scope.flat.are_pets_allowed,
-      // 'flat[room_rent_amount]': $scope.flat.room_rent_amount,
-      // 'flat[room_date_available]': $scope.flat.room_date_available,
-      // 'flat[room_preference]': $scope.flat.room_preference,
-      // 'flat[room_no_beds]': $scope.flat.room_no_beds,
-      // 'flat[room_type_bed]': $scope.flat.room_type_bed,
-      // 'flat[is_room_furnished]': $scope.flat.is_room_furnished,
-      // 'flat[room_bathroom]': $scope.flat.room_bathroom,
-      // 'flat[room_description]': $scope.flat.room_description
-
     };
-
-         // ngFileUpload's method to upload a file
-    // Upload.upload({
-    //   url: url + '/flats',
-    //   fields: data,
-    //   file: $scope.image.file,
-    //   fileFormDataName: 'flat[image]'
-    // }).success(function(response) {
-    //     console.log(response);
-    // });
-
-
     $http.post(url + '/flats', data).success(function(response){
       console.log(response);
     });
