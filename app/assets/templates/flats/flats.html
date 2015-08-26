@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
           <label>Building type</label>
-          <select ng-model="flat.building_type" ng-options="building_type.Name as building_type.Name for building_type in Building_type track by building_type.Id">
+          <select ng-model="flat.buildingType" ng-options="buildingType.Name as buildingType.Name for buildingType in BuildingType track by buildingType.Id">
            </select>
         </div>
         <div class="form-group">
@@ -91,7 +91,7 @@
         </div>
         <div class="form-group">
           <label>What type of bathroom is provided?</label>
-          <select ng-model="flat.room_bathroom" ng-options="room_bathroom.Name as room_bathroom.Name for room_bathroom in Room_bathroom track by room_bathroom.Id">
+          <select ng-model="flat.roomBathroom" ng-options="roomBathroom.Name as roomBathroom.Name for roomBathroom in RoomBathroom track by roomBathroom.Id">
            </select>
         </div>
         <div class="form-group">

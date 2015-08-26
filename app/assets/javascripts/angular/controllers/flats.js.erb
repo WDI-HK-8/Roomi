@@ -1,80 +1,78 @@
 app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
 
-var url = "<%= ENV['URL'] %>" || "http://localhost:3000";
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000";
 
   $scope.flat = {};
   $scope.form = {};
 
-  $scope.Building_type = [{
-       Id: 1,
-       Name: 'Chinese walk up'
+  $scope.BuildingType = [{
+    Id: 1,
+    Name: 'Chinese walk up'
     }, {
-       Id: 2,
-       Name: 'House'
+    Id: 2,
+    Name: 'House'
     }, {
-       Id: 3,
-       Name: 'Appartment'
+    Id: 3,
+    Name: 'Appartment'
     }, {
-       Id: 4,
-       Name: 'Sharehouse'
+    Id: 4,
+    Name: 'Sharehouse'
     }, {
-        Id:4,
-        Name: 'Penthouse'
-   }];
+    Id:4,
+    Name: 'Penthouse'
+  }];
 
   $scope.Num= [{
-       Id: 1,
-       Name: '1'
+    Id: 1,
+    Name: '1'
     }, {
-       Id: 2,
-       Name: '2'
+    Id: 2,
+    Name: '2'
     }, {
-       Id: 3,
-       Name: '3'
+    Id: 3,
+    Name: '3'
     }, {
-       Id: 4,
-       Name: '4'
+    Id: 4,
+    Name: '4'
     }, {
-        Id:5,
-        Name: '5'
-      }, {
-        Id:6,
-        Name: '6'
-      }, {
-        Id:7,
-        Name: '7'
-      }, {
-        Id:8,
-        Name: '8+'
-   }];
+    Id:5,
+    Name: '5'
+    }, {
+    Id:6,
+    Name: '6'
+    }, {
+    Id:7,
+    Name: '7'
+    }, {
+    Id:8,
+    Name: '8+'
+  }];
 
-     $scope.Room_bathroom = [{
-       Id: 1,
-       Name: 'Shared'
+  $scope.RoomBathroom = [{
+    Id: 1,
+    Name: 'Shared'
     }, {
-       Id: 2,
-       Name: 'Ensuite'
-   }];
+    Id: 2,
+    Name: 'Ensuite'
+  }];
 
 
   $scope.Bed= [{
-       Id: 1,
-       Name: 'Single'
+    Id: 1,
+    Name: 'Single'
     }, {
-       Id: 2,
-       Name: 'Double'
+    Id: 2,
+    Name: 'Double'
     }, {
-       Id: 3,
-       Name: 'Queen'
+    Id: 3,
+    Name: 'Queen'
     }, {
-       Id: 4,
-       Name: 'King'
+    Id: 4,
+    Name: 'King'
     }, {
-        Id:5,
-        Name: 'Bunk bed'
-   }];
-
-
+    Id:5,
+    Name: 'Bunk bed'
+  }];
 
   $scope.form.create = function(){
     var data = {
@@ -85,6 +83,4 @@ var url = "<%= ENV['URL'] %>" || "http://localhost:3000";
       console.log(response);
     });
   };
-
-
-}]);  
+}]);
