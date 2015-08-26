@@ -11,10 +11,16 @@ app.config(['$routeProvider','$locationProvider','$authProvider', function($rout
       templateUrl: "<%= asset_path('auth/signup.html') %>",
       controller: 'SignUpCtrl'
     }).
+
     when('/myprofile',{
       templateUrl: "<%= asset_path('users/myprofile.html') %>",
       controller: 'MyProfileCtrl'
-    })
+    }).
+
+    when('/myprofile/newflat', {
+      templateUrl: "<%= asset_path('flats/flats.html') %>",
+      controller: 'ListRoomCtrl'
+    });
 
   $authProvider.configure({
     apiUrl: "<%= ENV['URL'] || 'http://localhost:3000' %>"
