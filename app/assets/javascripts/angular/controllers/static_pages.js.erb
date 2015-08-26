@@ -4,10 +4,10 @@ app.controller('StaticPagesCtrl', ['$scope', '$http', '$auth', '$location', func
   $scope.loginForm = {};
 
   // check if user is logged in
-  $scope.authResponse = []
-  $scope.authResponse.push($auth.validateUser())
-  $scope.authStatus = $scope.authResponse[0].$$state.status
-  $scope.loginName = $scope.authResponse[0].$$state.value.first_name
+  $scope.authResponse = $auth.validateUser()
+  console.log($scope.authResponse)
+  $scope.authStatus = $scope.authResponse.$$state.status
+  $scope.loginName = $scope.authResponse.$$state.value.first_name
   
   if ($scope.authStatus == 2) {
     $scope.loggedIn = false;  
