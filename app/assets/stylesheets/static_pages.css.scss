@@ -18,6 +18,7 @@ font-weight: bold;
 
 .navbar-inverse {
   background-color: #030303;
+  height:65px;
 }
 
 .navbar-brand {
@@ -62,14 +63,20 @@ font-weight: bold;
   font-family: Lato;
 }
 
-#searchbar{
-  margin-top: 10px;
-  margin-left: 35%;
-  width: 400px
-}
-
-#searchbar input{
-  width: 300px
+#findroom {
+  margin-top: 15px;
+  margin-right: 20px;
+  height: 36px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  color: white;
+  background-color: #23b8e5;
+  font-weight: bold; 
+  border: 2px solid #fff;
+  font-family: Lato;
 }
 
 /*dropdown menu - Log in*/

@@ -7,7 +7,36 @@ app.controller('SearchCtrl', ['$scope', '$http', '$auth', '$location', function(
 
   })
 
+  $scope.Districts = [
+    { Id: 1, Name: 'All'}, 
+    { Id: 2, Name: 'Central & Western' },
+    { Id: 3, Name: 'Eastern'},
+    { Id: 4, Name: 'Islands'},
+    { Id: 5, Name: 'Kowloon City'},
+    { Id: 6, Name: 'Kwai Tsing'},
+    { Id: 7, Name: 'Kwun Tong'},
+    { Id: 8, Name: 'North'},
+    { Id: 9, Name: 'Sai Kun'},
+    { Id: 10, Name: 'Sha Tin'},
+    { Id: 11, Name: 'Sham Shui Po'},
+    { Id: 12, Name: 'Southern'},
+    { Id: 13, Name: 'Tai Po'},
+    { Id: 14, Name: 'Tuen Mun'},
+    { Id: 15, Name: 'Tsuen Wan'},
+    { Id: 16, Name: 'Wan Chai'},
+    { Id: 17, Name: 'Wong Tai Sin'},
+    { Id: 18, Name: 'Yau Tsim Mong'},
+    { Id: 19, Name: 'Yuen Long'}
+  ];
   
-
+  $scope.filterFlats = function(flat,index,array){
+    if ($scope.district_name == 'All'){
+      return true;
+    } else {
+      return flat.building_district_name == $scope.district_name;
+    }
+  }
 
 }]);
+
+

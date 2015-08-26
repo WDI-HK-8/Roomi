@@ -16,10 +16,13 @@
           <label>Level (if applicable)</label>
           <input type="text" class="form-control" placeholder="Enter category" ng-model="flat.property_floor">
         </div>
+
         <div class="form-group">
-          <label>District</label>
-          <input type="text" class="form-control" placeholder="Enter category" ng-model="flat.building_district_name">
+          <label>Select a district</label>
+          <select ng-model="flat.building_district_name" ng-options="district.Name as district.Name for district in Districts track by district.Id">
+          </select>
         </div>
+
         <div class="form-group">
           <label>Building type</label>
           <select ng-model="flat.building_type" ng-options="buildingType.Name as buildingType.Name for buildingType in BuildingType track by buildingType.Id">
