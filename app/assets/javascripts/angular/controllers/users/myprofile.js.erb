@@ -1,21 +1,21 @@
 app.controller('MyProfileCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
     
   $scope.authResponse = $auth.validateUser()
-  var user_loggedin = $scope.authResponse.$$state.value
+  var userLoggedIn = $scope.authResponse.$$state.value
   
-  $scope.first_name = user_loggedin.first_name;
-  $scope.last_name = user_loggedin.last_name;
-  $scope.email = user_loggedin.email;
-  $scope.phone = user_loggedin.phone;
-  $scope.age = user_loggedin.age;
-  $scope.occupation = user_loggedin.occupation;
-  $scope.gender = user_loggedin.gender;
+  $scope.first_name = userLoggedIn.first_name;
+  $scope.last_name = userLoggedIn.last_name;
+  $scope.email = userLoggedIn.email;
+  $scope.phone = userLoggedIn.phone;
+  $scope.age = userLoggedIn.age;
+  $scope.occupation = userLoggedIn.occupation;
+  $scope.gender = userLoggedIn.gender;
   
-  $scope.is_smoker = user_loggedin.is_smoker ? "Yes" : "No";
-  $scope.have_kids = user_loggedin.have_kids ? "Yes" : "No";
-  $scope.have_pet = user_loggedin.have_pet ? "Yes" : "No";
+  $scope.is_smoker = userLoggedIn.is_smoker ? "Yes" : "No";
+  $scope.have_kids = userLoggedIn.have_kids ? "Yes" : "No";
+  $scope.have_pet = userLoggedIn.have_pet ? "Yes" : "No";
   
-  $scope.description = user_loggedin.description;
+  $scope.description = userLoggedIn.description;
 
 }]);
 
