@@ -105,3 +105,16 @@
   </div>
 </div>
 </section>
+<div class="container">
+  <div class="row">
+    <form ng-submit="form.create()">
+      <div class="form-group">
+      <!-- File upload button -->
+      <div class="button" ngf-select ng-model="image.file">Select File</div>
+       <!-- Image / file preview -->
+      <img ngf-src="image.file" width="200" height="200">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
+
