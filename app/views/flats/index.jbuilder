@@ -1,6 +1,6 @@
 json.array! @flats do |flat|
   json.id flat.id
-  json.building_number flat.building_number
+  json.bulding_number flat.bulding_number
   json.building_street_name flat.building_street_name
   json.building_district_name flat.building_district_name
   json.building_type flat.building_type
@@ -19,4 +19,6 @@ json.array! @flats do |flat|
   json.is_room_furnished flat.is_room_furnished
   json.room_bathroom flat.room_bathroom
   json.room_description flat.room_description
+  json.user_id flat.user_id
+  json.user flat.user
 end

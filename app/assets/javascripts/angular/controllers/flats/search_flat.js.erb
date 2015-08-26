@@ -1,0 +1,13 @@
+app.controller('SearchCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
+
+  $scope.flats = [];
+  $http.get('/flats').success(function(response){
+    $scope.flats = response
+    console.log($scope.flats)
+
+  })
+
+  
+
+
+}]);
