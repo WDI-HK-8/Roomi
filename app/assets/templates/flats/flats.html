@@ -1,5 +1,5 @@
 <navbar></navbar>
-<section>
+<section id="flat-form">
 <div class="container">
   <div class="row">
     <form ng-submit="form.create()">
@@ -58,7 +58,7 @@
       </div>
      
 <!-- room  -->
-      <div class="col-lg-offset-6 col-lg-6">
+      <div class="col-lg-offset-6 col-lg-6 room-panel">
         <div class="form-group">
           <label>Rent amount per month</label>
           <input type="text" class="form-control" placeholder="Enter title" ng-model="flat.room_rent_amount">
@@ -99,7 +99,7 @@
           <input type="text" class="form-control" placeholder="Enter category" ng-model="flat.room_description">
         </div>
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
     </form>
   </div>
 </div>
