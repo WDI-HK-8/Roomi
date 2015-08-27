@@ -1,16 +1,21 @@
 <navbar></navbar>
-<div class="container content">
+<div class="content">
+  
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <div class="form-group">
+          <label>Select a district</label>
+          <select ng-model="district_name" ng-options="district.Name as district.Name for district in Districts track by district.Id">
+         </select>
+        </div> 
+      </li>
+    </ul>
+  </div>
+  
   <div class="row">
-
-    <div class="form-group">
-      <label>Select a district</label>
-      <select ng-model="district_name" ng-options="district.Name as district.Name for district in Districts track by district.Id">
-      </select>
-    </div>
-
-    <div class="container col-xs-9 list_of_flats">
+    <div class="container col-lg-offset-2 col-lg-6 list_of_flats room-style">
       <div class="row">
-
         <div class="container flat-item" ng-repeat="flat in flats | filter: filterFlats">
           <a href="#/room/{{ flat.id }}">
             <div class="container col-xs-8">
