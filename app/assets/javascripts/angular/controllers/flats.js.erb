@@ -4,6 +4,7 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', functio
 
   $scope.flat = {};
   $scope.form = {};
+  $scope.image = {};
 
   $scope.BuildingType = [{
     Id: 1,
@@ -13,7 +14,7 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', functio
     Name: 'House'
     }, {
     Id: 3,
-    Name: 'Appartment'
+    Name: 'Appartment' 
     }, {
     Id: 4,
     Name: 'Sharehouse'
@@ -78,9 +79,13 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', functio
     var data = {
       flat: $scope.flat
     };
-
     $http.post(url + '/flats', data).success(function(response){
       console.log(response);
     });
   };
 }]);
+
+
+
+
+

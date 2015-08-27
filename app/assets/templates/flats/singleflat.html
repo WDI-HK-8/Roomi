@@ -1,0 +1,96 @@
+<navbar></navbar>
+ <!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+    </div>
+    <div class="item">
+      <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel-body" id="top-line">
+        <span class="top-details">{{flat.building_number}} {{flat.building_street_name}}, {{flat.building_district_name}}</span>
+        <span class="top-details">
+          Rent per month: {{flat.room_rent_amount | currency : $ : 0}}
+        </span>
+        <span class="top-details">
+          Room is available on {{flat.room_date_available | date:'longDate'}}
+        </span>
+      </div>
+      <hr>
+    </div>
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><i class="fa fa-fw fa-check"></i> The property</h4>
+      </div>
+      <div class="panel-body">
+        <div>The building is a {{flat.building_type}}</div>
+        <div>{{flat.property_nbr_of_rooms}} bedrooms</div>
+        <div>{{flat.property_nbr_of_bathrooms}} bathroom(s)</div>
+        <div>{{smoking}}</div>
+        <div>{{wifi}}</div>
+        <div>{{pets}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><i class="fa fa-fw fa-gift"></i> The room </h4>
+      </div>
+      <div class="panel-body">
+        <div>{{flat.room_no_beds}} {{flat.room_type_bed}} bed(s) available</div>
+        <div>{{furnished}}</div>
+        <div>The room has a {{flat.room_bathroom}} bathroom</div>
+        <div> {{gender}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><i class="fa fa-fw fa-compass"></i> Room description</h4>
+      </div>
+      <div class="panel-body">
+        <span> {{ flat.room_description}}</span>
+      </div>
+    </div>
+  </div>
+  </div> 
+  <hr>
+  <!-- Contact the owner -->
+  <div class="well">
+    <div class="row">
+      <div class="col-md-8">
+        <h4> Does this room tickle your fancy? Poke the owner to let them know you are interested and he/she will get back to you!</h4>
+      </div>
+      <div class="col-md-4">
+          <a class="btn btn-lg btn-default btn-block" href="#">Poke the Owner</a>
+      </div>
+    </div>
+  </div>
+</div>

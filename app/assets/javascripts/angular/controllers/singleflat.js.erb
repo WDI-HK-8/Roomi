@@ -1,0 +1,30 @@
+app.controller('SingleFlatCtrl', ['$scope', '$http', '$auth', '$location', '$routeParams', function($scope, $http, $auth, $location, $routeParams){
+
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000";
+
+  $http.get(url + '/flats/' + $routeParams.id).success(function(response){
+    $scope.flat = response;
+    console.log(response)
+
+    $scope.flat.property_can_smoke ? $scope.smoking = "You are allowed to smoke in this property" : $scope.smoking = "You are not allowed to smoke in this property"
+       
+    $scope.flat.property_have_wifi ? $scope.wifi = "Wifi is available" : $scope.wifi = "Wifi is not available"
+    
+    $scope.flat.are_pets_allowed ? $scope.pets = "Pets are allowed" : $scope.pets = "Pets are not allowed"
+    
+    if ($scope.flat.room_preference == 'Male'){
+      $scope.gender = "Males applicants prefered"
+    } 
+    else if ($scope.flat.room_preference == 'Female'){
+      $scope.gender = "Female applicants prefered"
+    }
+    else {
+     $scope.gender = "Male and Female applicants accepted"
+    }
+    $scope.flat.is_room_furnished ? $scope.furnished = "Room includes all other furnishings" : $scope.furnished = "You will need to provide all other furnishings"
+  });
+}]);
+
+
+
