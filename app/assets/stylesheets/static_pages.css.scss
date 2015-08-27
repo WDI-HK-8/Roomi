@@ -250,9 +250,41 @@ font-weight: bold;
 #recently-added {
   background-color: #252831; 
   background-size: cover;
-  height: 400px;
+  height: 500px;
   color: #fff;
   padding-top: 10px;
   text-align: center;
   font-family: Lato;
 }
+
+.sentance {
+  font-size: 20px;
+
+}
+
+.test
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.one
+{
+  background: image-url("yohan2.jpeg");
+}
+
+.two
+{
+  background: image-url("fer.png");
+}
+
+.three
+{
+  background: image-url("harry4.png") no-repeat center;
+}
+
