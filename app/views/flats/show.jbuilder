@@ -17,3 +17,5 @@ json.room_type_bed @flat.room_type_bed
 json.is_room_furnished @flat.is_room_furnished
 json.room_bathroom @flat.room_bathroom
 json.room_description @flat.room_description
+json.user @flat.user
+json.image @flat.image

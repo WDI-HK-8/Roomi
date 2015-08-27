@@ -29,6 +29,8 @@ app.controller('SearchCtrl', ['$scope', '$http', '$auth', '$location', function(
     { Id: 19, Name: 'Yuen Long'}
   ];
   
+  $scope.district_name = 'All';
+  
   $scope.filterFlats = function(flat,index,array){
     if ($scope.district_name == 'All'){
       return true;
