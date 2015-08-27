@@ -1,0 +1,33 @@
+#flat-form {
+  background: image-url("tablebg.png") no-repeat center;
+  background-size: cover;
+  height: 120%;
+}
+
+.signup-bg {
+
+}
+
+.room-panel {
+  margin-top: -577px;
+}
+
+#submit-btn {
+  margin-top: 450px;
+  margin-left: 15px;
+}
+
+.create-flat-form {
+  font-family: lato;
+  margin-top: 100px;
+  /*margin-bottom: 50px;*/
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
