@@ -1,31 +1,38 @@
 <navbar></navbar>
-<div class="container list_of_flats">
+<div class="container content">
   <div class="row">
+
     <div class="form-group">
       <label>Select a district</label>
       <select ng-model="district_name" ng-options="district.Name as district.Name for district in Districts track by district.Id">
       </select>
     </div>
 
-    <div class="container flat-item" ng-repeat="flat in flats | filter: filterFlats">
-      <a href="#/room/{{ flat.id }}">
-        <div class="container col-xs-8">
-          <div class="row">
-            <div class="container col-xs-4">
-              <img src="http://media-cdn.tripadvisor.com/media/photo-o/02/35/07/69/appart-city-chalon-sur.jpg">
+    <div class="container col-xs-9 list_of_flats">
+      <div class="row">
+
+        <div class="container flat-item" ng-repeat="flat in flats | filter: filterFlats">
+          <a href="#/room/{{ flat.id }}">
+            <div class="container col-xs-8">
+              <div class="row">
+                <div class="container col-xs-4">
+                  <img src="http://media-cdn.tripadvisor.com/media/photo-o/02/35/07/69/appart-city-chalon-sur.jpg">
+                </div>
+                <div class="container col-xs-4">
+                  <h2>{{ flat.building_district_name }}</h2>
+                  <h4>{{ flat.room_rent_amount | currency: HKD:0}} per month</h4>
+                  <h4>availble from {{ flat.room_date_available | date:'longDate'}}</h4>
+                </div>
+                <div class="container col-xs-4">
+                  <p>Posted by {{ flat.user.first_name }}</p>
+                  <p>{{ flat.room_description }}</p>
+                </div>
+              </div>
             </div>
-            <div class="container col-xs-4">
-              <h2>{{ flat.building_district_name }}</h2>
-              <h4>{{ flat.room_rent_amount | currency: HKD:0}} per month</h4>
-              <h4>availble from {{ flat.room_date_available | date:'longDate'}}</h4>
-            </div>
-            <div class="container col-xs-4">
-              <p>Posted by {{ flat.user.first_name }}</p>
-              <p>{{ flat.room_description }}</p>
-            </div>
-          </div>
+          </a>
         </div>
-      </a>
+      
+      </div>
     </div>
 
   </div>

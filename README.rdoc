@@ -1,28 +1,32 @@
-== README
+## Find a nice Roomi!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Roomi is a platform where users can either find a flat to share or find a roommate. This project has been created by Richie Bostock and Raphael dieu, proud students of General Assembly's HK Web Development Immersive 8 program.
 
-Things you may want to cover:
+## Technical Specs
 
-* Ruby version
+Languages:
 
-* System dependencies
+- Ruby 2.2.2
+- Javascript
+- HTML 5
 
-* Configuration
+Framweworks:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Rails 4.2.3
+- Angular 1.4.4
+- Bootstrap 3.3.5
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Installation instructions
+
+- Fork the repo from: git@github.com:WDI-HK-8/Roomi.git or https://github.com/WDI-HK-8/Roomi.git
+- Clone the git into a new directory
+	- <tt>$ bundle install</tt>
+	- <tt>$ rake db:create</tt>
+	- <tt>$ rake db:migrate</tt>
+	- <tt>$ rake db:seed</tt>
+	- <tt>$ bower install</tt>
+	- <tt>$ rails server</tt>
+
+After that, your version of Roomi will be up and running!
+

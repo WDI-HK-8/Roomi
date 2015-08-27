@@ -94,7 +94,8 @@
         </div>
         <div class="form-group">
           <label>What type of bathroom is provided?</label>
-          <select ng-model="flat.room_bathroom" ng-options="roomBathroom.Name as roomBathroom.Name for roomBathroom in RoomBathroom track by roomBathroom.Id">
+          <input type="radio" ng-model="flat.room_bathroom" value="Shared">Shared</input>
+          <input type="radio" ng-model="flat.room_bathroom" value="Ensuite">Ensuite</input>
            </select>
         </div>
         <div class="form-group">
