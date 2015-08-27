@@ -1,11 +1,51 @@
 
 
 .flat-item {
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 30px;
   display: inline-block;
+  background-color: #fdfdfd;
 }
 
 img{
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding-top: 20px;
+    list-style: none;
+    color: #fff;
+}
+
+#sidebar-wrapper {
+  width: 250px;
+  margin-top: -10px;
+}   
+
+.room-syle {
+
+}
+

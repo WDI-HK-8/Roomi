@@ -18,13 +18,10 @@
           <label>Level (if applicable)</label>
           <input type="text" class="form-control" placeholder="e.g. 8/f" ng-model="flat.property_floor">
         </div>
-
         <div class="form-group">
-          <label>Select a district</label>
-          <select ng-model="flat.building_district_name" ng-options="district.Name as district.Name for district in Districts track by district.Id">
-          </select>
+          <label>District</label>
+          <input type="text" class="form-control" placeholder="E.g. Central" ng-model="flat.building_district_name">
         </div>
-
         <div class="form-group">
           <label>Building type</label>
           <select ng-model="flat.building_type" ng-options="buildingType.Name as buildingType.Name for buildingType in BuildingType track by buildingType.Id">
@@ -61,6 +58,7 @@
           <input type="radio" ng-model="flat.are_pets_allowed" value="false">No</input>
         </div>
       </div>
+     
 <!-- room  -->
       <div class="col-lg-offset-6 col-lg-6 room-panel">
         <div class="form-group">
@@ -95,25 +93,25 @@
         </div>
         <div class="form-group">
           <label>What type of bathroom is provided?</label>
-          <input type="radio" ng-model="flat.room_bathroom" value="Shared">Shared</input>
-          <input type="radio" ng-model="flat.room_bathroom" value="Ensuite">Ensuite</input>
+          <select ng-model="flat.room_bathroom" ng-options="roomBathroom.Name as roomBathroom.Name for roomBathroom in RoomBathroom track by roomBathroom.Id">
            </select>
         </div>
         <div class="form-group">
           <label>Provide a general description of the room</label>
           <input type="text" class="form-control" placeholder="Enter description here" ng-model="flat.room_description">
         </div>
-        <hr>
-        <div class="form-group">
-          <button class="btn btn-default" ngf-select ng-model="image.file">Upload a photo</button>
-         <img id="img-preview" ngf-src="image.file" width="30" height="30">
-        </div>
-        <hr>
-        <button type="submit" id="submit-btn" class="btn btn-default">Submit your room!</button>
       </div>
+      <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
     </form>
   </div>
 </div>
 </section>
+
+
+
+
+
+
+
 
 
