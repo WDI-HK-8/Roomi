@@ -45,8 +45,6 @@ Rails.application.configure do
       :bucket => 'roomi-dev',
       access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
-      # access_key_id: ENV['AKIAJX5SVNW4X3FJQIRA'],
-      # secret_access_key: ENV['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']
     }
   }
 end

@@ -14,14 +14,14 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', 'Upload
     {Id:4, Name: 'Penthouse'}];
 
   $scope.Num= [
-  {Id: 1, Name: '1'}, 
-  {Id: 2, Name: '2'}, 
-  {Id: 3, Name: '3'},
-  {Id: 4, Name: '4'},
-  {Id:5, Name: '5'},
-  {Id:6, Name: '6'},
-  {Id:7, Name: '7'},
-  {Id:8, Name: '8+'}];
+    {Id: 1, Name: '1'}, 
+    {Id: 2, Name: '2'}, 
+    {Id: 3, Name: '3'},
+    {Id: 4, Name: '4'},
+    {Id:5, Name: '5'},
+    {Id:6, Name: '6'},
+    {Id:7, Name: '7'},
+    {Id:8, Name: '8+'}];
 
   $scope.RoomBathroom = [
     {Id: 1, Name: 'Shared'}, 
@@ -58,23 +58,6 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', 'Upload
       'room_description': $scope.flat.room_description
     };
 
-    // ngFileUpload's method to upload a file
-    // Upload.upload({
-    //   url: url + '/flats',
-    //   fields: data,
-    //   file: $scope.image.file,
-    //   fileFormDataName: 'image',
-    //   formDataAppender: function(fd, key, val) {
-    //     if (angular.isArray(val)) {
-    //         angular.forEach(val, function(v) {fd.append(key, v) })
-    //     } else {
-    //         fd.append(key, val);
-    //     }
-    //   }
-    // }).success(function(response) {
-    //     console.log(response);
-    // });
-
     $scope.upload = Upload.upload({
       url: url + '/flats',
       method: 'POST',
@@ -92,14 +75,8 @@ app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', 'Upload
         }
     });
 
-
     $http.post(url + '/flats', {flat: data}).success(function(response){
       console.log(response);
     });
   };
 }]);
-
-
-
-
-
