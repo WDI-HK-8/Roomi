@@ -1,6 +1,5 @@
 json.array! @flats do |flat|
   json.id flat.id
-  json.bulding_number flat.bulding_number
   json.building_street_name flat.building_street_name
   json.building_district_name flat.building_district_name
   json.building_type flat.building_type
