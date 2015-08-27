@@ -5,7 +5,7 @@ gem 'rails', '4.2.3'
 
 gem 'sass-rails'
 gem 'paperclip', '~> 4.3'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
