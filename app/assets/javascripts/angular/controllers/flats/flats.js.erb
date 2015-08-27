@@ -1,0 +1,66 @@
+app.controller('ListRoomCtrl', ['$scope', '$http', '$auth', '$location', function($scope, $http, $auth, $location){
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000";
+
+  $scope.flat = {};
+  $scope.form = {};
+  $scope.image = {};
+
+  $scope.BuildingType = [
+    { Id: 1, Name: 'Chinese walk up'}, 
+    { Id: 2, Name: 'House'}, 
+    { Id: 3, Name: 'Appartment'}, 
+    { Id: 4, Name: 'Sharehouse'}, 
+    { Id: 5, Name: 'Penthouse'}
+  ];
+
+  $scope.Num = [
+    { Id: 1, Name: '1'},
+    { Id: 2, Name: '2'}, 
+    { Id: 3, Name: '3'}, 
+    { Id: 4, Name: '4'}, 
+    { Id: 5, Name: '5'},
+    { Id: 6, Name: '6'},
+    { Id: 7, Name: '7'}, 
+    { Id: 8, Name: '8+'}
+  ];
+
+  $scope.Bed= [
+    { Id: 1, Name: 'Single'}, 
+    { Id: 2, Name: 'Double'}, 
+    { Id: 3, Name: 'Queen'}, 
+    { Id: 4, Name: 'King'}, 
+    { Id: 5, Name: 'Bunk bed'}
+  ];
+
+  $scope.Districts = [
+    { Id: 1,  Name: 'All'}, 
+    { Id: 2,  Name: 'Central & Western' },
+    { Id: 3,  Name: 'Eastern'},
+    { Id: 4,  Name: 'Islands'},
+    { Id: 5,  Name: 'Kowloon City'},
+    { Id: 6,  Name: 'Kwai Tsing'},
+    { Id: 7,  Name: 'Kwun Tong'},
+    { Id: 8,  Name: 'North'},
+    { Id: 9,  Name: 'Sai Kun'},
+    { Id: 10, Name: 'Sha Tin'},
+    { Id: 11, Name: 'Sham Shui Po'},
+    { Id: 12, Name: 'Southern'},
+    { Id: 13, Name: 'Tai Po'},
+    { Id: 14, Name: 'Tuen Mun'},
+    { Id: 15, Name: 'Tsuen Wan'},
+    { Id: 16, Name: 'Wan Chai'},
+    { Id: 17, Name: 'Wong Tai Sin'},
+    { Id: 18, Name: 'Yau Tsim Mong'},
+    { Id: 19, Name: 'Yuen Long'}
+  ];
+
+  $scope.form.create = function(){
+    var data = {
+      flat: $scope.flat
+    };
+    $http.post(url + '/flats', data).success(function(response){
+      console.log(response);
+    });
+  };
+}]);

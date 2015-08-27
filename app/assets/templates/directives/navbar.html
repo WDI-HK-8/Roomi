@@ -7,20 +7,12 @@
   </div>
   <!-- Top Menu Items -->
   <ul class="nav top-nav">
-    <!-- search bar -->
-    <li class="" id="searchbar">
-      <form class="navbar-form form-inline global-search" role="form">
-        <div class="form-group">
-          <label class="sr-only" for="">Enter search terms</label>
-          <input type="search" class="form-control" id="front-search" placeholder="Find a room">
-          </input>
-        </div>
-        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
-      </form>
-    </li>        
     <!-- list room -->
     <li class="pull-right">
       <a href="" ng-click="list_room()" id="listmyroom">LIST MY ROOM</a>
+    </li>
+    <li class="pull-right">
+      <a href="" ng-click="find_room()" id="findroom">FIND A ROOM</a>
     </li>
     <!-- login -->
     <li ng-if="!loggedIn" class="pull-right dropdown">

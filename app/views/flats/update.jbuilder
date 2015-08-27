@@ -1,5 +1,4 @@
 json.id @flat.id
-json.building_number @flat.building_number
 json.building_street_name @flat.building_street_name
 json.building_district_name @flat.building_district_name
 json.building_type @flat.building_type

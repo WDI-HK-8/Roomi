@@ -38,7 +38,6 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
       then(function(response){
         //handle success
         console.log(response);
-        alert("You have signed out");
         $scope.loggedIn = false;
         $location.path('/')
       }).
@@ -48,13 +47,20 @@ app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $
       });
   };
 
-   //redirect to list room
+   //redirect to create room
   $scope.list_room = function(){ 
     if ($scope.loggedIn == false) {
-      console.log("asd");
       $location.path('/signup');
     } else {
       $location.path('/myprofile/newflat');
+    }
+  }
+   //redirect to list room
+  $scope.find_room = function(){ 
+    if ($scope.loggedIn == false) {
+      $location.path('/signup');
+    } else {
+      $location.path('/search');
     }
   }
 }]);

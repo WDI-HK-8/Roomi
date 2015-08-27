@@ -1,38 +1,26 @@
 app.controller('SignUpCtrl', ['$scope', '$http', '$auth', '$location','$window', function($scope, $http, $auth, $location, $window){
   $scope.message = "SignUp"
 
-  $scope.Occupations = [{
-                Id: 1,
-                Name: 'Student'
-            }, {
-                Id: 2,
-                Name: 'Employed'
-            }, {
-                Id: 3,
-                Name: 'Unemployed'
-            }, {
-                Id: 4,
-                Name: 'Retired'
-            }];
+  $scope.Occupations = [
+    {Id: 1, Name: 'Student'},
+    {Id: 2, Name: 'Employed'}, 
+    {Id: 3, Name: 'Unemployed'}, 
+    {Id: 4, Name: 'Retired'}
+  ];
 
   $scope.registrationForm = {};
 
   $scope.signup = function(){
-    console.log($scope.registrationForm);
 
     $auth.submitRegistration($scope.registrationForm).
       then(function(response){
         //handle success
-        console.log(response);
         $location.path('/');
       }).catch(function(response){
         //handle errors
-        console.log(response);
       });
   }
   $scope.authResponse = $auth.validateUser()
   $scope.authStatus = $scope.authResponse.$$state.status
-  console.log($scope.authResponse)
-  console.log($scope.authResponse.$$state.value)
   
 }]);
