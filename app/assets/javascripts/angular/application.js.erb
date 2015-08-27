@@ -26,6 +26,10 @@ app.config(['$routeProvider','$locationProvider','$authProvider', function($rout
     when('/search', {
       templateUrl: "<%= asset_path('flats/search_flat.html') %>",
       controller: 'SearchCtrl'
+    }).
+    when('/roomi/:id', {
+      templateUrl: "<%= asset_path('users/userpage.html') %>",
+      controller: 'UserCtrl'
     })
 
   $authProvider.configure({

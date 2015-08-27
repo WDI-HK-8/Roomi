@@ -1,0 +1,52 @@
+<navbar></navbar>
+<div class="signup-bg">
+  <div class="row">
+    <div class="signup-form col-lg-4 col-lg-offset-4" id="user_details">
+      <div class="row">
+        <h1 class="title"> About {{ first_name }}</h1>
+        <hr>
+      <table class="user-table col-lg-10 col-lg-offset-1">
+         <tr>
+          <td>Name:</td>
+          <td> {{ user.first_name }} {{ user.last_name }}</td>
+        </tr>
+         <tr>
+          <td>Email:</td>
+          <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+          <td>Phone:</td>
+          <td>{{ user.phone }}</td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td>{{ user.age }}</td>
+        </tr>
+        <tr>
+          <td>Occupation:</td>
+          <td>{{ user.occupation }}</td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>{{ user.gender }}</td>
+        </tr>
+        <tr>
+          <td>Smoker:</td>
+          <td>{{ user.is_smoker }}</td>
+        </tr>
+        <tr>
+          <td>Children:</td>
+          <td>{{ user.have_kids }}</td>
+        </tr>
+        <tr>
+          <td>Pets:</td>
+          <td>{{ user.have_pet }}</td>
+        </tr>
+        <tr>
+          <td>About {{ first_name }}:</td>
+          <td>{{ user.description }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
