@@ -1,9 +1,10 @@
-<div class="container">
+<div class="signup-bg ">
   <div class="row">
-    
-    <div class="container col-lg-6 col-lg-offset-3">
+    <div class=" signup-form col-lg-offset-4 col-lg-4">
+    <div class="container  col-lg-8 col-lg-offset-2">
       <div class="row">
-        <h1> {{ message }} </h1>
+        <h1 class="title"> {{ message }} </h1>
+        <hr>
         <form ng-submit="signup()">
 
           <div class="form-group">
@@ -43,36 +44,36 @@
 
           <div class="form-group">
             <label>Occupation</label>
-            <select ng-model="registrationForm.occupation" ng-options="occupation.Name as occupation.Name for occupation in Occupations track by occupation.Id">
+            <select class="btn-default dropdown-toggle" ng-model="registrationForm.occupation" ng-options="occupation.Name as occupation.Name for occupation in Occupations track by occupation.Id">
             </select>
           </div>
 
           <div class="form-group">
             <label>Gender</label>
-            <input type="radio" ng-model="registrationForm.gender" value="male" />male
-            <input type="radio" ng-model="registrationForm.gender" value="female" />female<br />
+            <input type="radio" ng-model="registrationForm.gender" value="male"/><span>male</span>
+            <input type="radio" ng-model="registrationForm.gender" value="female" /><span>female</span>
           </div>
 
           <div class="form-group">
-            <label>Are you a smoker ?</label>
+            <label>Are you a smoker?</label>
             <input type="radio" ng-model="registrationForm.is_smoker" value="true" />Yes
             <input type="radio" ng-model="registrationForm.is_smoker" value="false" />Nope<br />
           </div>
 
           <div class="form-group">
-            <label>Do you have any kids ?</label>
+            <label>Do you have any children?</label>
             <input type="radio" ng-model="registrationForm.have_kids" value="true" />Yes
             <input type="radio" ng-model="registrationForm.have_kids" value="false" />Nope<br />
           </div>
 
           <div class="form-group">
-            <label>Any pets ?</label>
+            <label>Do you own any pets?</label>
             <input type="radio" ng-model="registrationForm.have_pet" value="true" />Yes
             <input type="radio" ng-model="registrationForm.have_pet" value="false" />Nope<br />
           </div>
 
           <div class="form-group">
-            <label>Tell about yourself</label>
+            <label>Tell us about yourself</label>
             <input type="text" name="description" ng-model="registrationForm.description" required="required" class="form-control">
           </div>
 
@@ -81,6 +82,8 @@
         </form>
       </div>
     </div>
-  
+    </div>
   </div>
 </div>
+
+
